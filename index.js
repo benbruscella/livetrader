@@ -28,7 +28,8 @@ const _ = require ('lodash');
     // console.log(data);
     // console.log('max bid', _.max(data.bid));
     // console.log('min ask', _.min(data.ask));
-    console.log('trade', (_.max(data.bid) - _.min(data.ask))/ _.min(data.ask) * 100);
-  }, 1000);
+    let trade = (_.max(data.bid) - _.min(data.ask))/ _.min(data.ask) * 100
+    console.log(`trade ${trade}%`);
+  }, 500);
 
 }) ();
